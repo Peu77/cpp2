@@ -29,27 +29,27 @@ Fixed &Fixed::operator=(const Fixed &fixed) {
 	return *this;
 }
 
-Fixed Fixed::operator>(const Fixed &fixed) const {
+bool Fixed::operator>(const Fixed &fixed) const {
 	return _value > fixed.getRawBits();
 }
 
-Fixed Fixed::operator<(const Fixed &fixed) const {
+bool Fixed::operator<(const Fixed &fixed) const {
 	return _value < fixed.getRawBits();
 }
 
-Fixed Fixed::operator>=(const Fixed &fixed) const {
+bool Fixed::operator>=(const Fixed &fixed) const {
 	return _value >= fixed.getRawBits();
 }
 
-Fixed Fixed::operator<=(const Fixed &fixed) const {
+bool Fixed::operator<=(const Fixed &fixed) const {
 	return _value <= fixed.getRawBits();
 }
 
-Fixed Fixed::operator==(const Fixed &fixed) const {
+bool Fixed::operator==(const Fixed &fixed) const {
 	return _value == fixed.getRawBits();
 }
 
-Fixed Fixed::operator!=(const Fixed &fixed) const {
+bool Fixed::operator!=(const Fixed &fixed) const {
 	return _value != fixed.getRawBits();
 }
 
@@ -68,7 +68,7 @@ Fixed Fixed::operator*(const Fixed &fixed) const {
 Fixed Fixed::operator/(const Fixed &fixed) const {
 	return Fixed(toFloat() / fixed.toFloat());
 }
-y
+
 Fixed &Fixed::operator++(void) {
 	_value++;
 	return *this;
