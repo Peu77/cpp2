@@ -87,7 +87,7 @@ void drawTriangle(Point &a, Point &b, Point &c, const char *color) {
 
     std::cout << "Triangle visualization:" << std::endl;
     for (int y = height; y > 0; y--) {
-        for (int x = width; x > 0; x--) {
+        for (int x = 0; x < width; x++) {
             if (grid[y][x]) {
                 std::cout << color << "█" << RESET;
             } else {
