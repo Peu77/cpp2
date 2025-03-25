@@ -68,7 +68,7 @@ Fixed Fixed::operator*(const Fixed &fixed) const {
 Fixed Fixed::operator/(const Fixed &fixed) const {
 	return Fixed(toFloat() / fixed.toFloat());
 }
-y
+
 Fixed &Fixed::operator++(void) {
 	_value++;
 	return *this;
